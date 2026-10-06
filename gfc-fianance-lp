@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 5-Minute Month-End Financial Check | Golden Falcon Consultants</title>
+<meta name="description" content="A free one-page financial check for UAE D2C beauty and personal-care founders. See where your month-end numbers look clear and where they need a closer look.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#17356F;--navy-d:#102A5A;--orange:#FFB000;--bg:#fff;--bg2:#F6F8FB;--text:#111;--muted:#5E6470;--line:#E3E7EE;--r:8px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-weight:400;color:var(--text);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+body.modal-open{overflow:hidden}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.eyebrow::before{content:"";width:24px;height:3px;background:var(--orange)}
+h2{font-size:clamp(28px,3.6vw,40px);font-weight:500;line-height:1.2;color:var(--navy-d);letter-spacing:-.01em}
+.btn{font:700 14px/1 'Poppins',sans-serif;letter-spacing:.06em;text-transform:uppercase;border:0;border-radius:6px;padding:18px 30px;cursor:pointer;background:var(--orange);color:var(--navy-d);transition:background .15s,transform .15s}
+.btn:hover{background:#f0a400}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.65;cursor:not-allowed}
+
+/* ===== HEADER ===== */
+.site-header{background:#fff;border-bottom:1px solid #E5E8ED;height:74px}
+.site-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:block;width:142px;height:44px;flex:none}
+.logo img{width:100%;height:100%;object-fit:contain;object-position:left center;display:block;font-size:0;color:transparent}
+.hdr-link{display:inline-flex;align-items:center;justify-content:center;width:124px;height:41px;font-size:13px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);text-decoration:none;border:1.5px solid var(--navy);background:#fff;border-radius:6px}
+.hdr-link:hover{background:var(--navy);color:#fff}
+
+/* ===== HERO ===== */
+.hero{padding:56px 0 0}
+.hero-grid{display:grid;grid-template-columns:54fr 46fr;gap:56px;align-items:center}
+.hero .eyebrow{margin-bottom:14px}
+.hero h1{font-size:clamp(34px,4.1vw,54px);font-weight:600;line-height:1.06;letter-spacing:-.02em;color:var(--navy-d);max-width:570px;margin-bottom:20px;text-wrap:balance}
+.hero .lead{font-size:17px;line-height:1.5;color:var(--muted);max-width:520px}
+.hero .lead+.lead{margin-top:6px}
+.btn-navy{background:var(--navy);color:#fff;height:52px;padding:0 28px;min-width:272px;margin-top:26px}
+.btn-navy:hover{background:var(--navy-d)}
+.micro{margin-top:12px;font-size:13px;color:var(--muted)}
+.chk{background:#fff;border:1.5px solid var(--navy);border-radius:10px;box-shadow:0 6px 18px rgba(16,42,90,.08);position:relative;max-width:480px;margin-left:auto;width:100%}
+.chk-h{padding:20px 22px 16px;border-bottom:1px solid #E2E7EF;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.chk-h small{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.chk-h b{display:block;font-size:19px;font-weight:600;line-height:1.25;color:var(--navy-d);margin-top:4px}
+.badge{flex:none;background:var(--orange);color:var(--navy-d);font-weight:700;font-size:12px;letter-spacing:.08em;padding:7px 12px;border-radius:999px;text-transform:uppercase}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px 22px 18px;background:var(--bg2)}
+.tile{background:#fff;border:1px solid #E2E7EF;border-radius:8px;padding:14px 14px 13px}
+.tile-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.tile svg{width:28px;height:28px;stroke:var(--navy);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tile .n{font-size:12px;font-weight:600;color:var(--orange);letter-spacing:.06em;-webkit-text-stroke:.3px #c98a00}
+.tile b{display:block;font-size:13px;font-weight:600;letter-spacing:.07em;color:var(--navy-d);text-transform:uppercase}
+.tile span{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);margin-top:2px}
+.tile span::before{content:"";width:8px;height:8px;border-radius:50%;border:2px solid var(--orange);flex:none}
+.chk-f{padding:12px 22px;border-top:1px solid #E2E7EF;font-size:12.5px;color:var(--navy);font-weight:500;text-align:center}
+.creds{margin-top:44px;border-top:1px solid #E5E8ED;padding:18px 0;display:flex;flex-wrap:wrap;gap:8px 44px;font-size:13px;color:var(--muted)}
+.creds b{color:var(--navy);font-weight:600;font-size:15px;margin-right:6px}
+
+/* ===== KEY INSIGHTS ===== */
+.insights{padding:96px 0;background:var(--bg2);margin-top:0;border-top:1px solid var(--line)}
+.sec-head{max-width:640px;margin-bottom:56px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.icard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:44px 24px 28px;position:relative}
+.num{position:absolute;top:-22px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--orange);color:var(--navy-d);font-weight:700;font-size:18px;display:grid;place-items:center}
+.icard .tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.icard h3{font-size:18px;font-weight:600;line-height:1.35;color:var(--navy-d);margin-bottom:12px}
+.icard p{font-size:14px;color:var(--muted)}
+
+/* ===== WHO CAN USE THIS ===== */
+.who{padding:96px 0;background:#fff}
+.who .sec-head{margin-bottom:44px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.wcard{background:var(--bg2);border-left:4px solid var(--orange);border-radius:0 var(--r) var(--r) 0;padding:28px 30px}
+.wcard h3{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+.wcard p{font-size:15px;color:var(--text)}
+
+/* ===== WHO MADE THIS + BONUS ===== */
+.quick{padding:72px 0 80px;background:#fff;border-top:1px solid var(--line)}
+.quick-grid{display:grid;grid-template-columns:1.1fr .9fr;grid-template-areas:"intro valid" "stats valid";column-gap:72px;row-gap:34px;align-items:start}
+.q-intro{grid-area:intro}
+.q-intro p{margin-top:18px;color:var(--muted);font-size:16px;max-width:500px}
+.stats{grid-area:stats;display:grid;grid-template-columns:repeat(3,auto);justify-content:start}
+.stat{padding:0 32px;border-left:1px solid var(--line)}
+.stat:first-child{padding-left:0;border-left:0}
+.stat b{display:block;font-size:30px;font-weight:600;line-height:1.1;color:var(--navy);letter-spacing:-.01em}
+.stat span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.valid{grid-area:valid;background:var(--bg2);border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:var(--r);padding:28px 30px}
+.valid h3{font-size:18px;font-weight:600;color:var(--navy-d);margin-bottom:8px}
+.valid p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.areas{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.areas li{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;color:var(--navy-d)}
+.areas li:last-child{border-bottom:0;padding-bottom:0}
+.areas svg{width:20px;height:20px;flex:none;stroke:var(--navy);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.bonus{margin-top:48px;background:var(--bg2);border:1.5px solid var(--navy);border-radius:10px;padding:40px 32px;text-align:center;position:relative;overflow:hidden}
+.bonus>*:not(.deco){position:relative;z-index:1}
+.deco{position:absolute;z-index:0;pointer-events:none;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.deco .l1{stroke:#17356F;stroke-width:1.6;opacity:.11}
+.deco .l2{stroke:#C9D3E6;stroke-width:1.6}
+.deco .g{fill:#FFB000;stroke:none;opacity:.6}
+.deco .gl{stroke:#FFB000;stroke-width:1.6;opacity:.55}
+.deco-list{left:6%;top:22px;width:112px;height:140px;transform:rotate(-6deg)}
+.deco-folder{right:7%;top:26px;width:140px;height:108px;transform:rotate(4deg)}
+.deco-chart{right:3.5%;bottom:20px;width:92px;height:74px}
+.bonus .kick{font-size:15px;color:var(--navy);font-weight:500;margin-bottom:8px}
+.bonus h2{font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:12px}
+.bonus p.copy{max-width:520px;margin:0 auto;color:var(--muted);font-size:16px}
+.bonus .btn{margin-top:24px}
+.bonus .micro{margin-top:12px}
+
+/* ===== FINAL CTA ===== */
+.final{background:var(--navy-d);color:#fff;padding:52px 0 48px;text-align:center}
+.final h2{color:#fff;max-width:720px;margin:0 auto 18px}
+.final p{max-width:560px;margin:0 auto 34px;color:#C9D3E6;font-size:17px}
+
+/* Footer */
+.lp-footer{
+  padding:36px 0 30px;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+
+.lp-footer .logo{
+  width:auto;
+  height:auto;
+  display:block;
+  text-align:center;
+  margin:0 auto;
+}
+
+.lp-footer .logo img{
+  height:30px;
+  width:auto;
+  margin:0 auto 14px;
+  opacity:.85;
+  display:block;
+}
+
+.lp-footer .footer-cta{
+  font-size:16px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:14px;
+}
+
+.lp-footer .footer-contact{
+  font-size:13.5px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+.lp-footer .footer-contact a{
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.lp-footer .disclaimer{
+  font-size:11.5px;
+  color:var(--muted);
+  opacity:.8;
+  margin-top:16px;
+  max-width:560px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.lp-footer .footer-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+.lp-footer .footer-buttons .btn{
+  padding:14px 20px;
+  font-size:14px;
+}
+
+.lp-footer .footer-buttons .btn svg{
+  width:16px;
+  height:16px;
+}
+
+.lp-footer .btn-call{
+  background:#24599D;
+  color:#fff;
+  box-shadow:0 6px 16px rgba(30,79,148,.28);
+}
+
+.lp-footer .btn-call:hover{
+  background:#173F78;
+}
+
+.lp-footer .btn-whatsapp{
+  background:#25D366;
+  color:#fff;
+  box-shadow:0 6px 16px rgba(37,211,102,.28);
+}
+
+.lp-footer .btn-whatsapp:hover{
+  background:#1EBB59;
+}
+
+/* ===== POPUP ===== */
+.overlay{position:fixed;inset:0;background:rgba(16,42,90,.62);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:16px;z-index:100}
+.overlay.open{display:flex}
+.modal{background:#fff;border-radius:10px;width:100%;max-width:460px;max-height:calc(100vh - 32px);overflow:auto;padding:34px 32px 30px;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+.modal h2{font-size:24px;font-weight:600;margin-bottom:6px}
+.modal .sub{font-size:14px;color:var(--muted);margin-bottom:22px}
+.x{position:absolute;top:12px;right:12px;width:40px;height:40px;border:0;background:none;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;border-radius:6px}
+.x:hover{color:var(--navy);background:var(--bg2)}
+.field{margin-bottom:16px}
+label{display:block;font-size:13px;font-weight:600;color:var(--navy-d);margin-bottom:6px}
+label span{font-weight:400;color:var(--muted)}
+input{width:100%;font:400 15px 'Poppins',sans-serif;padding:12px 14px;border:1.5px solid #C9D0DC;border-radius:6px;color:var(--text);background:#fff}
+input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(23,53,111,.15)}
+input[aria-invalid="true"]{border-color:#C0392B}
+.err{display:none;font-size:12px;color:#C0392B;margin-top:5px}
+.field.bad .err{display:block}
+.form-err{display:none;background:#FDF0EE;color:#962d20;font-size:13px;padding:10px 12px;border-radius:6px;margin-bottom:14px}
+.modal .btn{width:100%}
+.priv{font-size:12px;color:var(--muted);margin-top:12px;text-align:center}
+.done{display:none;text-align:center;padding:10px 0}
+.done .tick{width:52px;height:52px;border-radius:50%;background:var(--orange);color:var(--navy-d);display:grid;place-items:center;margin:0 auto 16px;font-size:26px;font-weight:700}
+.done p{color:var(--muted);font-size:14px;margin-bottom:6px}
+.done a{color:var(--navy);font-weight:600;font-size:14px}
+.modal.is-done form,.modal.is-done .head{display:none}
+.modal.is-done .done{display:block}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:980px){
+ .grid4{grid-template-columns:repeat(2,1fr);row-gap:40px}
+ .hero-grid{gap:32px}
+ .tile{padding:12px}
+ .quick-grid{column-gap:40px}
+ .stat{padding:0 20px}
+}
+@media(max-width:760px){
+ .site-header{height:64px}.logo{width:120px;height:38px}.hdr-link{width:108px;height:38px;font-size:12px}
+ .hero{padding-top:32px}
+ .hero-grid{grid-template-columns:1fr}
+ .chk{max-width:none;margin:0}
+ .hero .btn-navy{margin-top:22px}
+ .hero h1{font-size:clamp(36px,10.5vw,42px);margin-bottom:16px}
+ .hero .btn,.final .btn{width:100%}
+ .creds{margin-top:36px;gap:6px 24px}
+ .insights,.who,.quick{padding:64px 0}.final{padding:64px 0}
+ .sec-head{margin-bottom:44px}
+ .grid4,.grid2{grid-template-columns:1fr}
+ .quick-grid{grid-template-columns:1fr;grid-template-areas:"intro" "valid" "stats"}
+ .stats{grid-template-columns:repeat(3,1fr)}
+ .stat{padding:0 10px}.stat b{font-size:22px}.stat span{font-size:12px}
+ .bonus{padding:32px 20px;margin-top:36px}
+.bonus .btn{width:100%;padding-left:12px;padding-right:12px}
+.deco{display:none}
+ .modal{padding:30px 22px 24px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.final_end{
+  width:100%;
+  margin-top:28px;
+  text-align:center;
+}
+
+.final_end span{
+  display:block;
+  width:56px;
+  height:3px;
+  background:#FFB000;
+  margin:0 auto 14px;
+}
+
+.final_end p{
+  max-width:none !important;
+  margin:0 auto !important;
+  text-align:center !important;
+  color:#C9D3E6 !important;
+  font-size:13px !important;
+  letter-spacing:0.3px;
+  opacity:0.8;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Golden Falcon Consultants home"><img src="assets/gfc_logo.svg" alt="Golden Falcon Consultants" width="142" height="44"></a>
+   
+  </div>
+</header>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Free financial checklist</div>
+        <h1 id="h1">Is Your Month-End Telling the Full Story?</h1>
+        <p class="lead">A five-minute financial check for UAE D2C beauty and personal-care founders.</p>
+        <p class="lead">See what looks clear, what needs checking and what deserves a closer look.</p>
+        <button class="btn btn-navy" type="button" data-cta="hero_cta_click">Get the free financial checklist</button>
+        <p class="micro">One page · About 5 minutes · Built for D2C founders</p>
+      </div>
+
+      <div class="chk" role="img" aria-label="The 5-Minute Month-End Financial Checklist covers four areas: cash, margin, inventory, and tax and records">
+        <div class="chk-h">
+          <div><small>GFC Financial Check</small><b>5-Minute Month-End<br>Financial Checklist</b></div>
+          <div class="badge">5 min</div>
+        </div>
+        <div class="tiles">
+          <div class="tile"><div class="tile-top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18v3"/><path d="M3 7.5V18a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H5.5A2.5 2.5 0 0 1 3 7.5z"/><circle cx="16.5" cy="14" r="1.2"/></svg><span class="n">01</span></div><b>Cash</b><span>Visibility</span></div>
+          <div class="tile"><div class="tile-top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg><span class="n">02</span></div><b>Margin</b><span>Clarity</span></div>
+          <div class="tile"><div class="tile-top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg><span class="n">03</span></div><b>Inventory</b><span>Visibility</span></div>
+          <div class="tile"><div class="tile-top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg><span class="n">04</span></div><b>Tax &amp; records</b><span>Readiness</span></div>
+        </div>
+        <div class="chk-f">Four financial areas. Five minutes. One quick check.</div>
+      </div>
+    </div>
+
+    <div class="creds" aria-label="About Golden Falcon Consultants">
+      <span><b>17+</b>years of expertise</span>
+      <span><b>5,000+</b>satisfied customers</span>
+      <span><b>50+</b>qualified professionals</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY INSIGHTS ===== -->
+<section class="insights" aria-labelledby="ki">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Key insights</div>
+      <h2 id="ki">What Will This Financial Checklist Help You See?</h2>
+    </div>
+    <div class="grid4">
+      <article class="icard"><div class="num">1</div><div class="tag">Cash visibility</div><h3>Are sales actually turning into cash?</h3><p>See whether cash is tied up in payouts, refunds, receivables, suppliers or expenses.</p></article>
+      <article class="icard"><div class="num">2</div><div class="tag">Margin clarity</div><h3>Are your products really as profitable as they look?</h3><p>Look beyond selling price and consider the costs involved in getting products to customers.</p></article>
+      <article class="icard"><div class="num">3</div><div class="tag">Inventory visibility</div><h3>Do you know what your stock is really worth?</h3><p>Spot inventory that may be sitting in damaged, expired, promotional or slow-moving stock.</p></article>
+      <article class="icard"><div class="num">4</div><div class="tag">Tax &amp; reporting readiness</div><h3>Could your records stand up to scrutiny?</h3><p>Identify gaps that may need attention before VAT or Corporate Tax reporting.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO CAN USE THIS ===== -->
+<section class="who" aria-labelledby="wh">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Who it's for</div>
+      <h2 id="wh">Who Is This Checklist For?</h2>
+    </div>
+    <div class="grid2">
+      <article class="wcard"><h3>SOLOPRENEURS</h3><p>Managing finances independently while keeping track of sales, cash flow, inventory and the numbers behind the business.</p></article>
+      <article class="wcard"><h3>GROWING FOUNDERS</h3><p>Scaling a D2C business while keeping sales, payouts, inventory and financial visibility under control as complexity grows.</p></article>
+      <article class="wcard"><h3>FINANCE LEADS</h3><p>Overseeing sales, payouts, refunds and expenses while making sure the numbers are clear, current and easy to explain.</p></article>
+      <article class="wcard"><h3>TAX-READY FOUNDERS</h3><p>Keeping financial records organised and identifying gaps before VAT or Corporate Tax filing and year-end reporting.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO MADE THIS + BONUS ===== -->
+<section class="quick" aria-labelledby="wm">
+  <div class="wrap">
+    <div class="quick-grid">
+      <div class="q-intro">
+        <div class="eyebrow">Who made this</div>
+        <h2 id="wm">Built by financial experts.</h2>
+        <p>This financial check was created by the team at Golden Falcon Consultants, helping UAE businesses navigate accounting, VAT, Corporate Tax and financial reporting.</p>
+      </div>
+      <div class="valid">
+        <h3>Validated by GFC</h3>
+        <p>Designed from a financial and compliance perspective — so founders can use it as a quick check before taking the numbers to their accountant.</p>
+        <ul class="areas">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Accounting</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>VAT</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Corporate Tax</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Financial Reporting</li>
+        </ul>
+      </div>
+      <div class="stats" aria-label="Golden Falcon Consultants in numbers">
+        <div class="stat"><b>30,000+</b><span>Services Delivered</span></div>
+        <div class="stat"><b>5,000+</b><span>Satisfied Customers</span></div>
+        <div class="stat"><b>17+</b><span>Years of Expertise</span></div>
+      </div>
+    </div>
+
+    <div class="bonus">
+
+  <svg class="deco deco-list" viewBox="0 0 112 140" aria-hidden="true" focusable="false">
+    <rect class="l1" x="6" y="6" width="100" height="128" rx="6"/>
+    <path class="l1" d="M20 36l5 5 9-10"/>
+    <path class="l2" d="M46 36h46"/>
+    <rect class="l1" x="20" y="58" width="14" height="14" rx="2"/>
+    <path class="l2" d="M46 65h38"/>
+    <rect class="l1" x="20" y="86" width="14" height="14" rx="2"/>
+    <path class="l2" d="M46 93h46"/>
+    <path class="l2" d="M20 116h50"/>
+    <rect class="g" x="100" y="2" width="8" height="8"/>
+    <circle class="g" cx="4" cy="130" r="3"/>
+  </svg>
+
+  <svg class="deco deco-folder" viewBox="0 0 140 108" aria-hidden="true" focusable="false">
+    <path class="l1" d="M8 22a6 6 0 0 1 6-6h34l10 12h68a6 6 0 0 1 6 6v58a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z"/>
+    <path class="l1" d="M30 28V12h56v16"/>
+    <path class="l2" d="M42 24h30M8 44h124"/>
+    <path class="l2" d="M26 62h46M26 76h30"/>
+    <circle class="g" cx="124" cy="8" r="3.5"/>
+    <rect class="g" x="2" y="98" width="6" height="6"/>
+  </svg>
+
+  <svg class="deco deco-chart" viewBox="0 0 92 74" aria-hidden="true" focusable="false">
+    <rect class="l1" x="6" y="44" width="14" height="24" rx="1.5"/>
+    <rect class="l1" x="28" y="30" width="14" height="38" rx="1.5"/>
+    <rect class="l1" x="50" y="38" width="14" height="30" rx="1.5"/>
+    <rect class="l1" x="72" y="14" width="14" height="54" rx="1.5"/>
+    <path class="l2" d="M2 70h88"/>
+    <path class="gl" d="M10 30l22-12 22 6 30-18"/>
+    <circle class="g" cx="84" cy="6" r="3"/>
+  </svg>
+
+  <p class="kick">And here's something extra for you.</p>
+  <h2>Get early access to upcoming GFC tools.</h2>
+  <p class="copy">Sign up to receive new templates, checklists and practical work tools before they're shared more widely.</p>
+  <button class="btn" type="button" data-cta="section_cta_click">Get the checklist + unlock bonus</button>
+  <p class="micro">Free checklist · Early access to future resources</p>
+
+</div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final" aria-labelledby="fc">
+  <div class="wrap">
+    <h2 id="fc">Know Where Your Month-End Numbers Stand.</h2>
+
+    <p>Take five minutes to identify what looks clear, what needs checking and what deserves your accountant's attention.</p>
+
+    <button class="btn" type="button" data-cta="section_cta_click">Get the free financial checklist</button>
+
+    <div class="final_end">
+      <span></span>
+      <p>A practical starting point for a clearer month-end.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="lp-footer">
+  <div class="wrap">
+
+    <div class="logo">
+      <img src="assets/gfc_logo.svg" alt="Golden Falcon Consultants" width="65" height="30">
+    </div>
+
+    <p class="footer-cta">Get a free consultation from our experts.</p>
+
+    <div class="footer-buttons">
+
+      <a class="btn btn-call" href="tel:+971503098987">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h1.5a2.25 2.25 0 002.25-2.25v-1.372a1.5 1.5 0 00-1.318-1.489l-3.895-.487a1.5 1.5 0 00-1.5.732l-.712 1.28a11.25 11.25 0 01-5.94-5.94l1.28-.712a1.5 1.5 0 00.732-1.5l-.487-3.895A1.5 1.5 0 0010.372 4.5H9a2.25 2.25 0 00-2.25 2.25z"/>
+        </svg>
+        +971 50 309 8987
+      </a>
+
+      <a class="btn btn-whatsapp" href="https://api.whatsapp.com/send?phone=971503098987&text=Hi%20GFC%2C%20I%20need%20help%20with%20your%20financial%20services." target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38a9.94 9.94 0 004.79 1.22h.01c5.52 0 9.84-4.48 9.84-10S17.56 2 12.04 2zm5.85 14.13c-.25.7-1.45 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.68-.62-2.96-1.28-4.89-4.25-5.04-4.45-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.47.27-.29.6-.36.8-.36.2 0 .4 0 .57.01.18.01.43-.07.68.51.25.6.85 2.06.93 2.21.08.15.13.33.03.53-.1.2-.15.33-.3.5-.15.18-.31.4-.45.53-.15.15-.3.31-.13.61.17.3.77 1.26 1.65 2.04 1.14 1.01 2.1 1.33 2.4 1.48.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.81 2.02.96.3.15.5.22.57.35.08.13.08.7-.17 1.4z"/>
+        </svg>
+        Chat with an Expert
+      </a>
+
+    </div>
+
+    <p class="footer-contact">Golden Falcon Consultants &middot; FTA Registered Tax Agency &middot; DIFC Approved</p>
+    <p class="footer-contact">Dubai &middot; Abu Dhabi &middot; Sharjah &middot; Umm Al Quwain</p>
+
+    <p class="disclaimer">
+      &copy; 2026 Golden Falcon Consultants. This financial checklist is for general information and should not replace professional advice for your specific situation.
+    </p>
+
+  </div>
+</footer>
+
+<!-- ===== POPUP ===== -->
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="x" type="button" id="close" aria-label="Close">&times;</button>
+    <div class="head">
+      <h2 id="m-title">Get the 5-Minute Financial Check</h2>
+      <p class="sub">Enter your details to get the full check.</p>
+    </div>
+    <form id="lead-form" novalidate>
+      <div class="form-err" id="form-err" role="alert">Something went wrong sending your details. Please check your connection and try again.</div>
+      <div class="field"><label for="firstName">First name</label><input id="firstName" name="firstName" autocomplete="given-name" required><div class="err">Enter your first name.</div></div>
+      <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required><div class="err">Enter a valid work email address.</div></div>
+      <div class="field"><label for="company">Company name</label><input id="company" name="company" autocomplete="organization" required><div class="err">Enter your company name.</div></div>
+      <div class="field"><label for="website">Website <span>(optional)</span></label><input id="website" name="website" autocomplete="url" placeholder="yourbrand.com"></div>
+      <button class="btn" type="submit" id="submit">Download the check</button>
+      <p class="priv">We'll only use your details to deliver this resource.</p>
+    </form>
+    <div class="done" id="done" aria-live="polite">
+      <div class="tick" aria-hidden="true">✓</div>
+      <h2>Your financial check is ready.</h2>
+      <p style="margin-top:8px">Your download should start automatically.</p>
+      <a id="fallback-link" href="financial_check.pdf" download="financial_check.pdf">Download didn't start? Click here.</a>
+    </div>
+  </div>
+</div>
+<a id="auto-dl" href="financial_check.pdf" download="financial_check.pdf" hidden tabindex="-1" aria-hidden="true">Download the financial check</a>
+
+<script>
+/* ===== FORM CONFIGURATION ===== */
+const FORM_CONFIG = {
+  endpoint: "https://script.google.com/macros/s/AKfycbyqAZvCuWRgD2Gh4WDOuDNattyFEvtOJW_VfRt6lVs2ErOIsmLxi2PhlHucLV3I2nOEXw/exec",   // Replace with your form/CRM/webhook URL (accepts JSON POST)
+  downloadUrl: "assets/financial_check.pdf",
+  successRedirectUrl: "",           // Optional: redirect here after success instead of showing the in-modal state
+  emailDelivery: false,
+  autoDownload: true,
+  extraFields: { asset: "5-minute-month-end-financial-check" }
+};
+
+/* ===== ANALYTICS ===== */
+const ANALYTICS = { gaId: "", gtmId: "" };  // Optional; the page only pushes to window.dataLayer when it exists
+function track(event, data){
+  try{ (window.dataLayer = window.dataLayer || []).push(Object.assign({event: event}, data||{})); }catch(e){}
+}
+
+(function(){
+  const $ = id => document.getElementById(id);
+  const overlay = $('overlay'), modal = $('modal'), form = $('lead-form'), btn = $('submit');
+  let lastFocus = null;
+
+  function openModal(source){
+    lastFocus = document.activeElement;
+    modal.classList.remove('is-done');
+    overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+    track('form_opened', {source: source});
+    setTimeout(function(){ $('firstName').focus(); }, 30);
+  }
+  function closeModal(){
+    overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  document.querySelectorAll('[data-cta]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var ev = b.getAttribute('data-cta');
+      track(ev, {label: b.textContent.trim()});
+      openModal(ev);
+    });
+  });
+  $('close').addEventListener('click', closeModal);
+  overlay.addEventListener('mousedown', function(e){ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function(e){
+    if(!overlay.classList.contains('open')) return;
+    if(e.key === 'Escape'){ closeModal(); return; }
+    if(e.key === 'Tab'){ // keep focus inside modal
+      var f = modal.querySelectorAll('button,input,a[href]'); f = Array.prototype.filter.call(f, function(el){ return el.offsetParent !== null; });
+      if(!f.length) return;
+      var first = f[0], last = f[f.length-1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+
+  function setBad(input, bad){
+    input.setAttribute('aria-invalid', bad ? 'true' : 'false');
+    input.closest('.field').classList.toggle('bad', bad);
+  }
+  function validate(){
+    var ok = true, first = null;
+    ['firstName','email','company'].forEach(function(id){
+      var el = $(id), v = el.value.trim();
+      var bad = !v || (id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v));
+      setBad(el, bad);
+      if(bad){ ok = false; if(!first) first = el; }
+    });
+    if(first) first.focus();
+    return ok;
+  }
+
+  /* ===== LEAD CAPTURE ===== */
+  function getUtm(){
+    var out = {}, p = new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){ if(p.get(k)) out[k] = p.get(k); });
+    return out;
+  }
+  async function submitLead(lead){
+    var ep = FORM_CONFIG.endpoint;
+    if(!ep || ep === 'YOUR_FORM_ENDPOINT'){   // Not configured yet: preview mode, skip the network call
+      console.warn('GFC form: endpoint not configured. Lead not sent.', lead);
+      return true;
+    }
+    var res = await fetch(ep, {
+  method: 'POST',
+  mode: 'no-cors',
+  headers: {
+    'Content-Type': 'text/plain;charset=utf-8'
+  },
+  body: JSON.stringify(lead)
+});
+
+return true;
+  }
+  function startDownload(){
+    var a = $('auto-dl'); a.href = FORM_CONFIG.downloadUrl; $('fallback-link').href = FORM_CONFIG.downloadUrl;
+    if(FORM_CONFIG.autoDownload){ try{ a.click(); }catch(e){} }
+    track('checklist_downloaded', {file: FORM_CONFIG.downloadUrl});
+  }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    $('form-err').style.display = 'none';
+    if(!validate()) return;
+    var lead = Object.assign({
+      firstName: $('firstName').value.trim(),
+      email: $('email').value.trim(),
+      company: $('company').value.trim(),
+      website: $('website').value.trim(),
+      timestamp: new Date().toISOString(),
+      pageUrl: location.href
+    }, FORM_CONFIG.extraFields, getUtm());
+    btn.disabled = true; btn.textContent = 'Submitting…';
+    try{
+      await submitLead(lead);
+      track('form_submitted', {asset: lead.asset});
+      if(FORM_CONFIG.successRedirectUrl){ startDownload(); setTimeout(function(){ location.href = FORM_CONFIG.successRedirectUrl; }, 800); return; }
+      modal.classList.add('is-done');
+      startDownload();
+    }catch(err){
+      $('form-err').style.display = 'block';
+    }finally{
+      btn.disabled = false; btn.textContent = 'Download the check';
+    }
+  });
+  ['firstName','email','company'].forEach(function(id){
+    $(id).addEventListener('input', function(){ setBad($(id), false); });
+  });
+})();
+</script>
+</body>
+</html>
